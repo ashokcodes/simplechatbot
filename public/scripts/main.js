@@ -4,22 +4,32 @@
     const bot = 'bot';
     var i = 0;
     var num = 0;
+
+    //  Add Response Messages here
+    /**
+     * each response in responses array has a message with keyword 'msg'
+     * and a type with keyword 'type'
+     * if type is set to 1 then an options array can be provided as well
+     * options can be added as an array as a value for oprions key
+     */
     responses = [
             {
                 msg: "Hi! How are You?!",
                 type: 0
             },
             {
-                msg: "What would you like to drink?",
+                msg: "What would you like to learn?",
                 type: 0
             },
             {
                 msg: "Here you go",
                 type: 1,
-                options: ["Orange Juice","Pineapple Juice","Apple Juice"]
+                options: ["Python3","Node.JS","C"]
             }
 
         ]
+
+    //  Sending message on hitting ENTER
     $('#simple-chat-val').keypress(function (e) {
         var key = e.which;
         if(key == 13)  // the enter key code
@@ -33,6 +43,7 @@
             $('.simple-content').animate({scrollTop: 500},'slow');
        }
 
+       //   Send message and add to UI
        function sendMessage(msg){
            let node = '<div class="myMessage p-1"><div class="wrapper card p-3">'+msg+'</div></div>';
            $('.simple-content').append(node);
@@ -41,6 +52,7 @@
            scrollUP();
        }
 
+       //   Get response message
        function getMessage(){
            let response = responses[i];i++;
            let msg = response.msg;
