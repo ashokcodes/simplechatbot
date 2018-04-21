@@ -1,16 +1,17 @@
-#Simple Chatbot
+Simple Chatbot
+===============
 
-##Getting Started
-
+Getting Started
+---------------
 You would need nodejs and npm installed in your local system to run this chatbot
 
 
-##Running the chatbot
-
+Running the chatbot
+-------------------
 Navigate to your working directory and type into terminal
 `git clone https://github.com/ashokmohanakumar/simplechatbot.git`
 
-Navigate into ***simplechatboat*** floder and open the terminal in that directory
+Navigate into **simplechatboat** floder and open the terminal in that directory
 
 Initialize npm in the working directory with
 `npm init`
