@@ -2,11 +2,11 @@ var express = require("express")
 var app = express()
 
 
-app.use("view engine", "ejs")
-app.use("views", "./views")
+app.set("view engine", "ejs")
+app.set("views", "./views")
 
 
-app.set(express.static("./public"))
+app.use(express.static("./public"))
 
 app.get("/", (req, res) => {
     res.render("index")
